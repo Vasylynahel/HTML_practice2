@@ -1,0 +1,146 @@
+.contact {
+  background-color: $line-color;
+  padding: 80px 0; // зверху/знизу
+  display: flex;
+  justify-content: center;
+  padding-top:55px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  &__container {
+    @include container;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &__subtitle {
+    @include subtitle;
+    margin-bottom: 15px;
+    color: $blue-color;
+  }
+
+  &__title {
+    @include title;
+    color:#000;
+    margin-bottom: 20px;
+  }
+
+  &__divider-img {
+    display: block;
+    margin: 0 auto 40px;
+  }
+
+  &__info {
+    max-width: 980px;
+    padding-top: 49px;
+    margin: 0 auto; // Центрує блок горизонтально
+    @include flex-row;
+    justify-content: center; // Центрує елементи всередині
+    gap: 40px; // Відстань між елементами (опційно)
+    margin-bottom: 40px;
+    justify-content:space-between;
+  
+    &-item {
+
+      img {
+        display: block;
+        margin: 0 auto 25px;
+        width: 32px;
+        height: 32px;
+      }
+
+      p {
+        font-size: $font-size-p;
+        color: $text-color;
+        line-height: 1.5;
+      }
+
+      &:first-child {
+        padding-left: 3px;
+      }
+  
+      &:nth-child(2) {
+        padding-left: 23px;
+      }
+  
+      &:last-child {
+        padding-left: 1px;
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+    z-index: 2;
+    background-color: #000000;
+    padding: 60px 66px;
+    max-width: 770px;
+    max-height: 360px;
+    margin: 51px auto -66px; // підняти над картою
+
+    &-row {
+      @include flex-row;
+    }
+
+    &-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      input,
+      textarea {
+        background: transparent;
+        border: 1px solid #333;
+        border-radius: 5px;
+        padding: 12px;
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 14px;
+        max-width: 300px;
+        height: 50px;
+      }
+
+      &--right textarea {
+        min-height: 120px;
+      }
+    }
+
+    &-submit {
+      text-align: right;
+      padding-right: 20px;
+      
+
+      button {
+        background-color: $blue-color;
+        border: none;
+        height: 50px;
+        border-radius: 2px;
+        padding: 12px 30px;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: darken($blue-color, 10%);
+        }
+      }
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 370px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    iframe {
+      width: 100%;
+      max-height: 370px;
+      border: 0;
+      display: block;
+    }
+  }
+}

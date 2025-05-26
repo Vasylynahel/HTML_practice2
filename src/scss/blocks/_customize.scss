@@ -1,0 +1,51 @@
+.details {
+  &__container {
+    background-color: #dcdfdf;
+    margin-bottom: 2px;
+    padding-bottom:43px;
+    }
+  
+
+  &__text-section {
+    padding-left: 150px;
+    padding-top: 127px;
+    margin-bottom: 145px;
+    max-width: 850px;
+    padding-right: 0;
+  }
+
+  &__subtitle {
+    @include subtitle;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    @include title;
+    color:#000000;
+    margin: 0 0 19px;
+  }
+
+  &__divider {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    max-width: 470px;
+    padding-top: 14px;
+    margin-right: 0;
+    font-size: $font-size-p;
+    line-height: 1.42;
+    color: $text-color;
+  }
+
+  &__image-section {
+    padding-left: 50px;
+
+  }
+
+  &__image {
+    width: 85%;
+    height: auto;
+  }
+}

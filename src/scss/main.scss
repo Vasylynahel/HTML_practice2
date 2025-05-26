@@ -1,0 +1,55 @@
+@import "./blocks/mixins";
+@import "./blocks/adaptive";
+@import "./blocks/objects";
+@import "./blocks/header";
+@import "./blocks/banner";
+@import "./blocks/features";
+@import "./blocks/beautiful";
+@import "./blocks/customize";
+@import "./blocks/slider";
+@import "./blocks/contact";
+@import "./blocks/footer";
+@import "./blocks/pricing";
+@import "./blocks/whatyousee";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: $font-family;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 100%;
+  }
+
+.col-lg-6{
+  padding-left: 0;
+}
+
+.mapaarea{
+  background-color: #e5e5e5;
+  padding: 0;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-wrapper {
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}

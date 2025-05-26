@@ -1,0 +1,57 @@
+//line
+.divider {
+    @include center-text;
+  }
+  
+.divider_horizontal {
+    display: inline-block;
+    border: none;
+    background-color: $blue-color;
+    width: 20px;
+    height: 2px;
+  }
+  
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    width: 160px;
+    padding: 14px 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .btn-dark {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #535252;
+  }
+  
+  .btn-dark:hover {
+    background-color: #fcfcfc;
+    color: #000;
+  }
+  
+  .btn-blue {
+    background-color: $heading-color;
+    color: white;
+    border: none;
+  }
+  
+  .btn-blue:hover {
+    background-color:rgb(28, 154, 238);
+  }

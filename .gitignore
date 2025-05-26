@@ -1,0 +1,9 @@
+node_modules/
+.sass-cache/
+audit-report.json
+*.log
+dist/
+output.css
+.DS_Store
+
+

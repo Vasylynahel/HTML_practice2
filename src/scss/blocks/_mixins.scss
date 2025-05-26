@@ -1,0 +1,121 @@
+$blue-color: #008ed6;
+$white-color:#fdfdfd;
+$text-color: #929292;
+$line-color:#e5e5e5;
+$heading-color: #3498db;
+$default-color: #000;
+$font-family: "Source Sans Pro", sans-serif;
+$container-width: 1170px;
+$default-padding: 10px;
+$font-size-p:18px;
+$main-width:100%;
+
+@mixin subtitle {
+  color: $blue-color;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+@mixin title{
+  font-size: 36px;
+  color: $white-color;
+  margin-bottom: 25px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+@mixin description {
+  font-size: 18px;
+  max-width: 490px;
+  color: $text-color;
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+
+@mixin center-text {
+  text-align: center;
+  color: $blue-color;
+}
+
+@mixin nav-link-styles {
+  position: relative;
+  padding: 10px 8px;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  &::before {
+    left: 8px;
+  }
+  &::after {
+    right: 8px;
+  }
+}
+
+@mixin container {
+  margin: 0 auto;
+  width: $container-width;
+  padding-left: $default-padding;
+  padding-right: $default-padding;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin nav-link-style {
+    position: relative;
+    padding: 10px 8px;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+    }
+  
+    &::before {
+      left: 8px;
+    }
+  
+    &::after {
+      right: 8px;
+    }
+  
+    &:hover::before,
+    &:hover::after {
+      width: calc(47% - 8px);
+      background-color: $blue-color; 
+    }
+  
+    &:hover::before {
+      left: 8px;
+    }
+  
+    &:hover::after {
+      right: 8px;
+    }
+  }
+
+
+  
+   

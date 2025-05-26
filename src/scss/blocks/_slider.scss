@@ -1,0 +1,241 @@
+.feedback {
+  background: url("/img-5/back/background_slick.png") no-repeat center top;
+  background-size: cover;
+  padding-bottom: 68px;
+  margin-top: -35px;
+
+  &__container {
+    padding-left: 0;
+    height: 572px;
+    max-width: 1170px;
+  }
+
+  &__heading {
+    text-align: center;
+    padding-top: 61px;
+    padding-left: 13px;
+    }
+
+
+  &__subtitle {
+    @include subtitle;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 30px;
+  }
+
+  &__divider {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__slider {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+
+  }
+
+  &__slides {
+    display: flex;
+    width: 500%;
+    min-height: 400px;
+
+    .feedback__radio {
+      display: none;
+    }
+  }
+
+  &__slide {
+    width: 1170px;
+    transition: 2s;
+    display: flex;
+    margin-top: 88px;
+    flex-shrink: 0;
+  }
+
+  &__person {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+
+    &--right {
+      margin-left: 49px;
+    }
+
+    &-text {
+      font-style: italic;
+      font-size: 24px;
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+
+    &-about {
+      display: flex;
+      margin-top: 20px;
+
+      img {
+        padding-right: 22px;
+        margin-right: 4px;
+      }
+    }
+
+    &-name {
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    &-position {
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+
+  &__navigation-manual {
+    position: absolute;
+    width: $container-width;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__manual-btn {
+    border: 1px solid $line-color;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1.4s;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+
+    &:hover {
+      background: $default-color;
+      border-color: $default-color;
+      transform: scale(1.7);
+    }
+  }
+
+  // Radio inputs controlling slide transitions
+  #radio1:checked ~ .feedback__slide--first { transform: translateX(0%); }
+  #radio2:checked ~ .feedback__slide--first { transform: translateX(-100%); }
+  #radio3:checked ~ .feedback__slide--first { transform: translateX(-200%); }
+  #radio4:checked ~ .feedback__slide--first { transform: translateX(-300%); }
+
+  // Optional: Auto navigation buttons (if needed)
+  &__navigation-auto {
+    padding-top: 50px;
+
+    .auto-btn {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #ccc;
+      margin: 0 5px;
+      border-radius: 50%;
+    }
+  }
+
+.feedback__slides {
+  overflow: hidden;
+  width: 100%;
+}
+
+.feedback__slide p {
+  box-sizing: border-box;
+}
+}
+
+@media (max-width: 1200px) {
+  .feedback__slide {
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    padding: 0 15px;
+  }
+
+  .feedback__person {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+
+  .feedback__person--right {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .feedback__slide {
+    margin-top: 40px;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .feedback__person-text {
+    font-size: 20px;
+  }
+
+  .feedback__slides {
+    transition: transform 0.4s ease-in-out !important;
+  }
+  .feedback__navigation-manual {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback__subtitle {
+    font-size: 16px;
+  }
+
+  .feedback__title {
+    font-size: 24px;
+  }
+
+  .feedback__person-text {
+    font-size: 18px;
+  }
+
+  .feedback__person-name,
+  .feedback__person-position {
+    font-size: 14px;
+  }
+
+  .feedback__slider {
+    height: auto;
+  }
+  .feedback__navigation-manual {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback__container {
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .feedback__slide {
+    margin-top: 30px;
+  }
+
+  .feedback__navigation-manual {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .feedback__manual-btn {
+    margin-bottom: 10px;
+  }
+}
