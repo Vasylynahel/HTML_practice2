@@ -33,7 +33,7 @@
   &__item {
     max-width: 250px;
     padding: 0;
-
+    justify-content: center;
     padding-top: 39px;
     line-height: 1.5;
     text-align: center;
@@ -47,16 +47,27 @@
     &:nth-child(1) {
       margin-left: 0;
     }
-
+    
     &-img {
       width: 90px;
       height: 90px;
       border-radius: 50%;
       border: 1.5px solid $line-color;
+      justify-content: center;
+      text-align: center;
+      margin:auto;
+
 
       &:hover {
         border-color: $blue-color;
         border-width: 2px;
+      }
+
+      &-img{
+        display: block;
+        margin: 0 auto;
+        margin-top: 0px;
+        margin-top: 26px;
       }
     }
 

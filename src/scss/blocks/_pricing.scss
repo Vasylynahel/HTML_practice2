@@ -42,7 +42,11 @@
     margin: 60px auto;
     align-items: center;
   }
-
+    .row {
+      margin-left: -15px;
+      margin-right: -15px;
+    
+  }
   .pricing__card {
     min-width: 250px;
     max-width: 275px;
