@@ -124,13 +124,11 @@
     }
   }
 
-  // Radio inputs controlling slide transitions
   #radio1:checked ~ .feedback__slide--first { transform: translateX(0%); }
   #radio2:checked ~ .feedback__slide--first { transform: translateX(-100%); }
   #radio3:checked ~ .feedback__slide--first { transform: translateX(-200%); }
   #radio4:checked ~ .feedback__slide--first { transform: translateX(-300%); }
 
-  // Optional: Auto navigation buttons (if needed)
   &__navigation-auto {
     padding-top: 50px;
 
