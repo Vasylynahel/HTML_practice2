@@ -376,6 +376,11 @@
 .header.light-text .navbar-collapse {
   background-color: rgba(0, 0, 0, 0.9);
 }
+@media (min-width: 992px) {
+  .header.light-text .navbar-collapse {
+    background-color: transparent;
+  }
+}
 .header.light-text .row {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -1163,7 +1168,7 @@
 
 .footer .social-icons a {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 14px;
   transition: opacity 0.3s;
 }
 
@@ -1176,7 +1181,7 @@
 }
 
 .social-icons a {
-  margin: 0 14px;
+  margin: 0 10px;
   color: #57595c;
   font-size: 18px;
   text-decoration: none;
